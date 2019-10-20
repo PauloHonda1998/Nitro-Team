@@ -1,0 +1,45 @@
+﻿@model Models.CadastrodeEmpresasColaboradoras
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sobre a Empresa</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action( "Edit", "CadastrodeEmpresasColaboradoras", new { id = Model.IdEmpresa })" style="color: #ffffff">Editar |</a>
+
+    <a href="@Url.Action("Index") " style="color: #ffffff">Voltar </a>
+   
+</p>

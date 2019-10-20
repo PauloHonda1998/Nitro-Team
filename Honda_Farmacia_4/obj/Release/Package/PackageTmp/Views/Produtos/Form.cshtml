@@ -1,0 +1,77 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+
+    @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">*@
+
+    <!--Fontawesome CDN-->
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
+
+    <link href="~/Content/teste.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="overlays"></div>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Cadastro de Produtos</h3>
+                    <form action="/Produtos/Adiciona" method="post">
+                        <div class="texto">
+                        
+
+                            <div class="row">
+                                <div class=" form-group">
+                                    <label for="Codigo">Codigo:</label>
+                                    <input id="codigo" name="produto.codigo" />
+                                </div>
+                                <div class=" form-group">
+                                    <label for="Codigo_de_Barra">Codigo de Barra:</label>
+                                    <input id="Codigo_de_Barra" name="produto.Codigo_de_Barra" />
+                                </div>
+                                <div class=" form-group">
+                                    <label for="nome">Nome:</label>
+                                    <input id="nome" name="produto.nome" />
+                                </div>
+                                <div class=" form-group">
+                                    <label for="data">Data:</label>
+                                    <input id="data" name="produto.data" />
+                                </div>
+                                <div class=" form-group">
+                                    <label for="descrição">Descrição:</label>
+                                    <input id="descrição" name="produto.descrição" />
+                                </div>
+                                <div class=" form-group">
+                                    <label for="quantidade">Quatidade:</label>
+                                    <input id="quantidade" name="produto.quantidade" />
+                                </div>
+                                <div class=" form-group">
+                                    <label for="valor">Valor:</label>
+                                    <input id="valor" name="produto.valor" />
+                                </div>
+                                <div class="row">
+                                    <div class=" form-group">
+                                        <br/>
+                                        <br/>
+                                            <input type="submit" value="Cadastrar" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

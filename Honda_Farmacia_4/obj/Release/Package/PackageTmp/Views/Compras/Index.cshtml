@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Models.Compra>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Compras</h2>
+
+<p>
+    <a href="@Url.Action("Create", "compras")" style="color: #ffffff">Fazer Compra</a>
+    
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Farmaceutico.CNPJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdutosId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCompra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Farmaceutico.CNPJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdutosId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataCompra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade)
+        </td>
+        <td>
+
+            <a href="@Url.Action( "Edit", "compras", new { id = item.Id })" style="color: #ffffff">Editar |</a>
+            <a href="@Url.Action( "Details", "compras", new { id = item.Id })" style="color: #ffffff">Detalhes |</a>
+            <a href="@Url.Action( "Delete", "compras", new { id = item.Id })" style="color: #ffffff">Deletar </a>
+
+            
+        </td>
+    </tr>
+}
+
+</table>

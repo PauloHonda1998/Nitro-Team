@@ -1,0 +1,88 @@
+﻿@model Models.Produtos
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Deseja Excluir esse Produto ?</h3>
+    <div>
+        
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Codigo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Codigo_de_Barra)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Codigo_de_Barra)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Data)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Data)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Descrição)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Descrição)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Quantidade)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Valor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Valor)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Deletar" class="btn btn-default" /> |
+                <a href="@Url.Action("Index") " style="color: #ffffff">Voltar </a>
+            </div>
+        }
+    </div>
+</body>
+</html>

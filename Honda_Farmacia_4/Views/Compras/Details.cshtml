@@ -1,0 +1,54 @@
+﻿@model Models.Compra
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Iformações do Produto</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Farmaceutico.CNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Farmaceutico.CNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdutosId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdutosId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+    <a href="@Url.Action( "Edit", "compras", new { id = Model.Id })" style="color: #ffffff">Editar Compras|</a>
+
+    <a href="@Url.Action("Index") " style="color: #ffffff">Voltar </a>
+
+</p>

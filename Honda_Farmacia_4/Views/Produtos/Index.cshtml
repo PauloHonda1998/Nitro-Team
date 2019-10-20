@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Models.Produtos>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+
+</head>
+<body>
+
+    <p>
+
+        <a href="@Url.Action("Create", "Produtos")" style="color: #ffffff">Novo Produto</a>
+
+    </p>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo_de_Barra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descrição)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Codigo_de_Barra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descrição)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                   
+
+                    <a href="@Url.Action( "Edit", "Produtos", new { id = item.IdProdutos })" style="color: #ffffff">Editar |</a>
+                    <a href="@Url.Action( "Details", "Produtos", new { id = item.IdProdutos })" style="color: #ffffff">Detalhes |</a>
+                    <a href="@Url.Action( "Delete", "Produtos", new { id = item.IdProdutos })" style="color: #ffffff">Deletar </a>
+                    
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
